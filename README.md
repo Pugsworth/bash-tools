@@ -1,2 +1,2 @@
-# bash-tools
-Miscellaneous tools I wrote for various purposes that utilizes bash.
+# shell-tools
+Miscellaneous shell tools I wrote for various purposes.
