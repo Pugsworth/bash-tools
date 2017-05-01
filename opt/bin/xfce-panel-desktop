@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+function getPanelIdImpl() {
+  PANEL="`wmctrl -l | sed -n -e '/xfce4-panel$/ s_ .*$__ p' | sed -n -e $1' p'`"
+  echo $PANEL
+}
+
+function getPanelId() {
+  getPanelIdImpl $1
+  while [[ x == x$PANEL ]] ;do
+    sleep 0.5s
+    getPanelIdImpl $1
+  done
+}
+
+function putPanelDown() {
+  PANEL=""
+  getPanelId $1
+  wmctrl -i -r $PANEL -b add,below
+}
+
+# Put panel 3 down
+# this is the information deskbar
+putPanelDown 4

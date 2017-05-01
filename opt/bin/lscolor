@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+exec ~/opt/packages/color-test/test/test.sh

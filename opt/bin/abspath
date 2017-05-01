@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+# -e tests if "FILE" exists, regardless of what it is
+if [ -e "$1" ]; then
+    echo `readlink -f "$1"`
+else
+    echo "file or directory not found: \"$1\""
+fi

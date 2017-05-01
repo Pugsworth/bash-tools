@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+echo "These are the symbols to denote file type
+
+* - executables
+/ - directories
+@ - symbolic links
+| - FIFOs
+= - sockets
+> - doors
+(nothing) for regular files
+"

@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+if [ "$1" ]; then
+	( head -n1 "$1" ; tail -n +2 "$1" | sort -d -k1 ) | column -t -s ,  | perl -pe '$_ = "\033[1;100m$_\033[0m" if($. % 2)'
+else
+	echo "no filename given"
+	echo "print-csv: Reads a standard CSV file (comma delimited) and prints it formated and sorted."
+
+fi
+
