@@ -1,0 +1,34 @@
+# list of directories to be copied from -> to (relative to backupdir)
+# Caution: trailing slash matters
+# trailing slash will sync the contents rather than folder itself
+#
+# to sync a directory itself with contents to a location, do not use a trailing slash
+# otherwise a trailing slash syncs the CONTENTS of src to the destination folder
+# Example:
+#
+# [Directories]
+# ~/test/ -> /some/synced/location/
+#
+# ~/test/
+# ├── test.7zip
+# ├── test.avi
+# ├── test.bak
+#
+# ~/some/synced/location/
+# ├── test.7zip
+# ├── test.avi
+# ├── test.bak
+#
+# [Directories]
+# ~/test -> /some/synced/location/
+#
+# ~/test/
+# ├── test.7zip
+# ├── test.avi
+# ├── test.bak
+#
+# ~/some/synced/location/
+# ├── test/
+#
+# [Settings]
+# backupdir=
